@@ -1,0 +1,40 @@
+body{
+
+	background-color: #C5EFF7;
+}
+
+.login-box{
+	background-color: #BCAAA4;
+	padding: 15px;
+	margin-left: 33%;
+	margin-top: 10%;
+	
+}
+.center{
+	text-align: center;
+}
+
+.logo{
+	width: 30%;
+	height: 30%;
+
+}
+
+.btn-default {
+    color: #fff;
+    font-weight: bold;
+    background-color: #5D4037;
+    border-color: #6D4C41;
+}
+.btn-default:hover {
+    background-color: #8D6E63;
+    border-color: #8D6E63;
+}
+.btn-default:focus {
+    background-color: #8D6E63;
+    border-color: #8D6E63;
+}
+.btn-default:active {
+    background-color: #3E2723;
+    border-color: #3E2723;
+}
