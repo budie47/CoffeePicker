@@ -39,10 +39,15 @@
 	?>
 
 	<div class="container">
+		<div class="shop-btn-menu">
+			<button type="button" class="btn btn-primary btn-shop" data-toggle="modal" data-target="#CP_SHOP_ADD">Add New Shop</button>
+		</div>
 
 
-		<div class="shop-list">
+
 			<div class="row">
+
+				<div class="shop-list">
 				<div class="col-xs-6 col-md-3 shop-detail">
 					<a href="#" class="thumbnail">
 						<label class="shop-title">Kedai Kopi Saujana</label><span >
@@ -83,10 +88,10 @@
 		</div>
 
 
-
-
-
 	</div>
+	<?php
+	include 'admin/addNewShopModal.php';
+	?>
 
 </body>
 </html>
