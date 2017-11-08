@@ -3,15 +3,15 @@
   font-family: verdana;
   font-size: 12px;
   font-weight: 200;
-  background-color: #2e353d;
+  background-color: #3E2723;
   position: fixed;
   top: 0px;
-  width: 300px;
+  width: 200px;
   height: 100%;
   color: #e1ffff;
 }
 .nav-side-menu .brand {
-  background-color: #23282e;
+  background-color: #3E2723;
   line-height: 50px;
   display: block;
   text-align: center;
@@ -27,19 +27,7 @@
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  /*
-    .collapsed{
-       .arrow:before{
-                 font-family: FontAwesome;
-                 content: "\f053";
-                 display: inline-block;
-                 padding-left:10px;
-                 padding-right: 10px;
-                 vertical-align: middle;
-                 float:right;
-            }
-     }
-*/
+
 }
 .nav-side-menu ul :not(collapsed) .arrow:before,
 .nav-side-menu li :not(collapsed) .arrow:before {
@@ -69,7 +57,7 @@
   background-color: #181c20;
   border: none;
   line-height: 28px;
-  border-bottom: 1px solid #23282e;
+  border-bottom: 1px solid #3E2723;
   margin-left: 0px;
 }
 .nav-side-menu ul .sub-menu li:hover,
@@ -88,7 +76,7 @@
 .nav-side-menu li {
   padding-left: 0px;
   border-left: 3px solid #2e353d;
-  border-bottom: 1px solid #23282e;
+  border-bottom: 1px solid #3E2723;
 }
 .nav-side-menu li a {
   text-decoration: none;
@@ -142,4 +130,25 @@
 body {
   margin: 0px;
   padding: 0px;
+}
+nav{
+  background-color: #3E2723;
+}
+.navbar{
+    margin-bottom: 0;
+    border: none;
+    color: white;
+
+}
+.navbar-default{
+    background: #3E2723;
+
+}
+.navbar-default .navbar-nav > li > a,.navbar-default .navbar-brand{
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-brand:hover{
+    color: #ccc;
+
 }
