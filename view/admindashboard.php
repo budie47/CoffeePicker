@@ -19,7 +19,7 @@
 <body>
 
 	<nav  class="navbar navbar-default navbar-static-top" role="navigation">
-		<div class="navbar-header navbar-right toright"> 
+		<div class="navbar-header navbar-right toright">
 			<span class="navbar-brand white" style="margin-right: 20px;" href="#">Welcome Administrator</span>
 			<span class="navbar-brand white" style="margin-right: 20px;" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
 		</div>
@@ -40,13 +40,49 @@
 
 	<div class="container">
 
-		<div class="row">
-		  <div class="col-xs-6 col-md-3">
-		    <a href="#" class="thumbnail">
-		      
-		    </a>
-		  </div>
+
+		<div class="shop-list">
+			<div class="row">
+				<div class="col-xs-6 col-md-3 shop-detail">
+					<a href="#" class="thumbnail">
+						<label class="shop-title">Kedai Kopi Saujana</label><span >
+							<i class="fa fa-pencil glyphicon" style="color:green";float:left; aria-hidden="true"></i></span>
+						 <i class="fa fa-trash glyphicon" style="color:red";float:left;  aria-hidden="true"></i></span><br />
+
+						<span>Lot94, Jalan Lapangan Terbang Subang, Saujana, 40150 Shah Alam, Selangor</span><br />
+						<span>Operation Hour : <b>1000 - 2100</b> </span><br />
+						<span>Status : <b>OPEN</b></span>
+
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3 shop-detail">
+					<a href="#" class="thumbnail">
+						<label class="shop-title">Kedai Kopi Saujana</label><span >
+							<i class="fa fa-pencil glyphicon" style="color:green";float:left; aria-hidden="true"></i></span>
+						 <i class="fa fa-trash glyphicon" style="color:red";float:left;  aria-hidden="true"></i></span><br />
+
+						<span>Lot94, Jalan Lapangan Terbang Subang, Saujana, 40150 Shah Alam, Selangor</span><br />
+						<span>Operation Hour : <b>1000 - 2100</b> </span><br />
+						<span>Status : <b>OPEN</b></span>
+
+					</a>
+				</div>
+				<div class="col-xs-6 col-md-3 shop-detail">
+					<a href="#" class="thumbnail">
+						<label class="shop-title">Kedai Kopi Saujana</label><span >
+							<i class="fa fa-pencil glyphicon" style="color:green";float:left; aria-hidden="true"></i></span>
+						 <i class="fa fa-trash glyphicon" style="color:red";float:left;  aria-hidden="true"></i></span><br />
+
+						<span>Lot94, Jalan Lapangan Terbang Subang, Saujana, 40150 Shah Alam, Selangor</span><br />
+						<span>Operation Hour : <b>1000 - 2100</b> </span><br />
+						<span>Status : <b>OPEN</b></span>
+
+					</a>
+				</div>
+			</div>
 		</div>
+
+
 
 
 

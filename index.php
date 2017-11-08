@@ -31,7 +31,7 @@
 				<input type="password" class="form-control" id="login-password">
 			</div>
 			<div class="form-group">
-				<button type="button" class="btn btn-default btn-block" onclick="location.href = 'view/admindashboard.php'">LOGIN</button>
+				<button type="button" class="btn btn-default btn-block" onclick="location.href = 'view/admindashboard2.php'">LOGIN</button>
 			</div>
 
 
