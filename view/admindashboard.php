@@ -39,12 +39,10 @@
 	?>
 
 	<div class="container">
-		<div class="shop-btn-menu">
-			<button type="button" class="btn btn-primary btn-shop" data-toggle="modal" data-target="#CP_SHOP_ADD">Add New Shop</button>
-		</div>
-
-
-
+		<div id="cp-home">
+			<div class="shop-btn-menu">
+				<button type="button" class="btn btn-primary btn-shop" data-toggle="modal" data-target="#CP_SHOP_ADD"><i class="fa fa-plus" aria-hidden="true"></i> Add New Shop</button>
+			</div>
 			<div class="row">
 
 				<div class="shop-list">
@@ -87,11 +85,26 @@
 			</div>
 		</div>
 
+		</div>
+
+
+
+
+
 
 	</div>
 	<?php
 	include 'admin/addNewShopModal.php';
 	?>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#cp-home").show();
+})
+
+</script>
+
 
 </body>
 </html>

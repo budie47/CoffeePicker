@@ -33,11 +33,23 @@
 			<div class="form-group">
 				<button type="button" class="btn btn-default btn-block" onclick="location.href = 'view/admindashboard2.php'">LOGIN</button>
 			</div>
-
+			<a href="#" data-toggle="modal" data-target="#CP_REGISTER">Sign Up Here</a>
 
 		</div>
 
 	</div>
+	<?php
+	include 'view/registerModal.php';
+	?>
 
+	<script type="text/javascript">
+
+	$(document).ready({
+		//open register link
+
+
+	});
+
+	</script>
 </body>
 </html>
