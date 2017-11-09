@@ -62,3 +62,12 @@ body{
 .btn-shop{
 	float: right;
 }
+.dashboard-title{
+	float: left;
+	width: 250px;
+	height: 150px;
+}
+.shop-dashboard-pils{
+	margin-left: 150px;
+	margin-top: 10px;
+}
