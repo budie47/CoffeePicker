@@ -123,7 +123,7 @@
   <div class="row">
     <div class="col-md-4 text-center">
       <img class="img-circle" src="http://placehold.it/140x140">
-      <h2>1. Order</h2>
+      <h2>1. Choose Your Coffee</h2>
       <p>You can choose the coffee shop that you like.You can order the coffee from here with out waiting the queue long at the coffee shop.</p>
       <p><a class="btn btn-default" href="#">View details »</a></p>
     </div>
