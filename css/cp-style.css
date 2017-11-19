@@ -1,6 +1,6 @@
 body{
 
-	background-color: #C5EFF7;
+	background-color: ##CBAC85;
 }
 
 .login-box{
@@ -72,5 +72,32 @@ body{
 	margin-top: 10px;
 }
 .body-index{
-	
+
+}
+.img-square{
+	width: 140px;
+	height: 140px;
+}
+.navbar{
+	background-color: #5D4037;
+	color: #fff;
+}
+.navbar-inverse{
+	border-color: #08080800;
+}
+.navbar-inverse .navbar-brand{
+	color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a{
+	color: #fff;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+	background-color: #894b38;
+}
+.navbar-nav > li > .dropdown-menu{
+	background-color: #5D4037;
+
+}
+.dropdown-menu > li > a{
+	color: #fff;
 }
