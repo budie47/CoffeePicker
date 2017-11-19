@@ -32,9 +32,9 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">Shop <b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Search Shop</a></li>
-								<li><a href="#">Browse Shop</a></li>
-								<li><a href="#">Your Order</a></li>
+								<li><a href="shop.php">Search Shop</a></li>
+								<li><a href="menu.php">Browse Menu</a></li>
+								<li><a href="order.php">Your Order</a></li>
 							</ul>
 						</li>
 
@@ -56,7 +56,35 @@
 
 
 <div class="container" style="margin-top:90px">
-<h1>Menu</h1>
+	<div class="row">
+	 <div class="col-md-12" >
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4>Selected Shop Details</h4>
+		 </div>
+		</div>
+	 </div>
+	</div>
+	<div class="row">
+	 <div class="col-md-3" >
+	  <div class="panel panel-default">
+	   <div class="panel-heading">Order Summary</div>
+	    <div class="panel-body">
+				<h4></h4>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="col-md-9" >
+		<div class="panel panel-default">
+		 <div class="panel-heading">Order Menu</div>
+			<div class="panel-body">
+				<input type="text" class="form-control" id="" placeholder="Search your item here">
+				<h4></h4>
+		 </div>
+		</div>
+	 </div>
+	</div>
+
 </div><!-- /.container -->
 </body>
 </html>

@@ -55,8 +55,29 @@
 </div><!-- /navbar wrapper -->
 
 
-<div class="container">
-<h1>shop</h1>
+<div class="container" style="margin-top:90px">
+
+	<div class="row">
+	 <div class="col-md-3" >
+	  <div class="panel panel-default">
+	   <div class="panel-heading">Search Filter</div>
+	    <div class="panel-body">
+				<h4>By State</h4>
+				<h4>By Country</h4>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="col-md-9" >
+		<div class="panel panel-default">
+		 <div class="panel-heading">List of Shop</div>
+			<div class="panel-body">
+				<input type="text" class="form-control" id="" placeholder="Search your shop here">
+				<h4>using Data table</h4>
+		 </div>
+		</div>
+	 </div>
+	</div>
+
 </div><!-- /.container -->
 </body>
 </html>

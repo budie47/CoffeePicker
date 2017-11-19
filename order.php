@@ -78,7 +78,10 @@
 												<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
 												<div class="col-sm-10">
 													<h4 class="nomargin">Mocha</h4>
-													<p>Shop Name : LoL Shop</p>
+
+													<p>Size : Large 12oz</p>
+													<p>Add Ons : Chocolate Powder Topping</p>
+													<p>Comment : Put more Chocolate Topping and less suger</p>
 												</div>
 											</div>
 										</td>
@@ -105,6 +108,14 @@
 									</tr>
 								</tfoot>
 							</table>
+		 </div>
+		</div>
+	 </div>
+	 <div class="col-md-4" >
+		<div class="panel panel-default">
+		 <div class="panel-heading">Selected Shop</div>
+			<div class="panel-body">
+				<h4>Shop Information</h4>
 		 </div>
 		</div>
 	 </div>
