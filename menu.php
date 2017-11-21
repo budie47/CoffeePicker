@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Coffee Picker</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="lib/font-awesome-4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/cp-style.css">
-  <link rel="stylesheet" type="text/css" href="css/half-slider.css">
-
-	<script src="lib/jquery-3.2.1.min.js"></script>
-	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-
-</head>
+<?php require 'header.php'; ?>
 <body class="">
   <div class="navbar-wrapper">
   <div class="container">
@@ -48,6 +36,8 @@
               </ul>
             </li>
           </ul>
+
+
         </div>
 
     </div>
@@ -60,7 +50,22 @@
 	 <div class="col-md-12" >
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<h4>Selected Shop Details</h4>
+				<div class="row">
+						<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+							<ul class="shop-list-list">
+								<li>
+									<img src="img/example.jpg" alt="">
+									<div class="info">
+										<h2 class="title">The Coffee Bean</h2>
+										<p class="desc"><b>Address:</b> Jusco Melaka Shopping Center, G39, Lebuh Ayer Keroh, 75450 Melaka</p>
+										<p class="desc"><b>Open Hour:</b>10AM–10PM</p>
+									</div>
+
+								</li>
+							</ul>
+						</div>
+					</div>
+
 		 </div>
 		</div>
 	 </div>
@@ -70,7 +75,42 @@
 	  <div class="panel panel-default">
 	   <div class="panel-heading">Order Summary</div>
 	    <div class="panel-body">
-				<h4></h4>
+
+
+
+										<div class="col-md-12">
+												<strong>Mocha</strong>
+												<div class="pull-right"><span>RM</span><span>200.00</span></div>
+										</div>
+										<div class="col-md-12">
+												<strong>Quantity</strong>
+												<div class="pull-right"><span>1</span></div>
+												<hr>
+										</div>
+										<div class="col-md-12">
+												<strong>Mocha</strong>
+												<div class="pull-right"><span>RM</span><span>200.00</span></div>
+										</div>
+										<div class="col-md-12">
+												<strong>Quantity</strong>
+												<div class="pull-right"><span>1</span></div>
+												<hr>
+										</div>
+										<div class="col-md-12">
+												<strong>Mocha</strong>
+												<div class="pull-right"><span>RM</span><span>200.00</span></div>
+										</div>
+										<div class="col-md-12">
+												<strong>Quantity</strong>
+												<div class="pull-right"><span>1</span></div>
+												<hr>
+										</div>
+
+
+										<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='order.php'" >Checkout</button>
+
+
+
 	   </div>
 	  </div>
 	 </div>
@@ -79,7 +119,84 @@
 		 <div class="panel-heading">Order Menu</div>
 			<div class="panel-body">
 				<input type="text" class="form-control" id="" placeholder="Search your item here">
-				<h4></h4>
+				<hr />
+				<div class="col-xs-12 col-sm-6 col-md-3">
+			<div class="thumbnail" >
+				<div class="shop-item2">
+					<img src="img/ice-mocha.jpg" class="img-responsive item-img">
+				</div>
+
+				<div class="caption">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4 price">
+								<h3 style="margin:5px auto;"><label>$1</label></h3>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8">
+							<a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Add 2 Cart</a>
+							</div>
+					</div>
+
+					<p> </p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 item-tumbnail">
+				<div class="thumbnail shop-item" >
+					<div class="shop-item2">
+						<img src="img/mocha2.jpg" class="img-responsive item-img">
+					</div>
+				<div class="caption">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4 price">
+								<h3 style="margin:5px auto;"><label>$2</label></h3>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8">
+							<a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Add 2 Cart</a>
+							</div>
+					</div>
+
+					<p> </p>
+				</div>
+			</div>
+		</div>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="thumbnail shop-item" >
+					<div class="shop-item2">
+						<img src="img/mocha2.jpg" class="img-responsive item-img">
+					</div>
+				<div class="caption">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4 price">
+								<h3 style="margin:5px auto;"><label>$3</label></h3>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8">
+							<a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Add 2 Cart</a>
+							</div>
+					</div>
+
+					<p> </p>
+				</div>
+			</div>
+		</div>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="thumbnail" >
+					<div class="shop-item2">
+						<img src="img/mocha2.jpg" class="img-responsive item-img">
+					</div>
+				<div class="caption">
+					<div class="row">
+						<div class="col-md-4 col-sm-4 col-xs-4 price">
+								<h3 style="margin:5px auto;"><label>$4</label></h3>
+						</div>
+						<div class="col-md-8 col-sm-8 col-xs-8">
+							<a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-shopping-cart"></span> Add 2 Cart</a>
+							</div>
+					</div>
+
+					<p> </p>
+				</div>
+			</div>
+		</div>
 		 </div>
 		</div>
 	 </div>
