@@ -83,46 +83,50 @@
 
 								</div>
 								<div class="panel-body">
-										<canvas id="menuChart"></canvas>
+										<canvas id="bar-chart"></canvas>
 								</div>
 						</div>
 				</div>
 
 			</div>
+			<div class="row">
+				<div class="col-md-6">
+						<div class="panel panel-default">
+								<div class="panel-heading">
+										Stock Summary
+								</div>
+								<div class="panel-body">
+										This layout uses tabs to demonstrate what you could do with it. It probably makes more sense to use individual pages/templates in a production app.
+										<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+								</div>
+						</div>
+				</div>
+				<div class="col-md-3">
+						<div class="panel panel-default">
+								<div class="panel-heading">
+										Menu List
+								</div>
+								<div class="panel-body">
+										This layout uses tabs to demonstrate what you could do with it. It probably makes more sense to use individual pages/templates in a production app.
+										<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+								</div>
+						</div>
+				</div>
+				<div class="col-md-3">
+						<div class="panel panel-default">
+								<div class="panel-heading">
+										Staff Log
+								</div>
+								<div class="panel-body">
+										This layout uses tabs to demonstrate what you could do with it. It probably makes more sense to use individual pages/templates in a production app.
+										<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+								</div>
+						</div>
+				</div>
+			</div>
 
-			<div class="col-md-6">
-					<div class="panel panel-default">
-							<div class="panel-heading">
-									Stock Summary
-							</div>
-							<div class="panel-body">
-									This layout uses tabs to demonstrate what you could do with it. It probably makes more sense to use individual pages/templates in a production app.
-									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-							</div>
-					</div>
-			</div>
-			<div class="col-md-3">
-					<div class="panel panel-default">
-							<div class="panel-heading">
-									Menu List
-							</div>
-							<div class="panel-body">
-									This layout uses tabs to demonstrate what you could do with it. It probably makes more sense to use individual pages/templates in a production app.
-									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-							</div>
-					</div>
-			</div>
-			<div class="col-md-3">
-					<div class="panel panel-default">
-							<div class="panel-heading">
-									Staff Log
-							</div>
-							<div class="panel-body">
-									This layout uses tabs to demonstrate what you could do with it. It probably makes more sense to use individual pages/templates in a production app.
-									<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-							</div>
-					</div>
-			</div>
+
+
 
 
 
@@ -158,11 +162,29 @@ var chart = new Chart(ctx, {
     // Configuration options go here
     options: {}
 });
-var ctx1 = document.getElementById('menuChart').getContext('2d');
-var myBarChart = new Chart(ctx1, {
+
+
+//bar Chart
+// Bar chart
+new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
-    data: [{x:'Latte', y:20}, {x:'Mocha', y:10}],
-    options: options
+    data: {
+      labels: ["Latte", "Frappucino", "Capercino", "Americano", "Mocha"],
+      datasets: [
+        {
+          label: "Cups",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [78,67,34,84,33]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Top Selling Coffee This Month'
+      }
+    }
 });
 </script>
 
