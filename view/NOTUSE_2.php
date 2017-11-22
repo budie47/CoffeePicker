@@ -1,10 +1,5 @@
 <?php
-	session_start();
-	if (!isset($_SESSION['id'])) {
-		header('Location: ../index.php');
-	}
-	$user_id = $_SESSION['id'];
-	$user_name = $_SESSION['name'];
+
 
  ?>
 <!DOCTYPE html>
