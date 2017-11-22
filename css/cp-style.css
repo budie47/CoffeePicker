@@ -509,3 +509,6 @@ body{
 .product-list-menu > section > .panel-body{
 	background-color: #E2CFBF;
 }
+.modal-footer{
+	padding: 2px;
+}

@@ -57,9 +57,10 @@
 		 </div>
 		</div>
 
-
-
 	</div>
+	<?php
+include 'admin/updateShopSettingModal.php';
+	 ?>
 <script src="../controller/logout.js"></script>
 <script src="../controller/maintain-staff-controller.js"></script>
 

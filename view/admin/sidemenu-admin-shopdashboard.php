@@ -32,15 +32,13 @@
                   <li><a href="admin-shopmenu-list.php">Menu List</a></li>
                   <li><a href="admin-shopitem-list.php">Item List</a></li>
                 </ul>
-
                  <li>
-                  <a href="#">
-                  <i class="fa fa-cog fa-lg"></i> Shop Setting
+                  <a href="#" data-toggle="modal" data-target="#CP_SHOP_SETTING_UPDATE">
+                  <i class="fa fa-cog fa-lg" ></i> Shop Setting
                   </a>
                   </li>
-
                  <li>
-                  <a href="admindashboard.php">
+                  <a href="admindashboard.php" >
                   <i class="fa fa-arrow-left fa-lg"></i> Back to Shop List
                   </a>
                 </li>

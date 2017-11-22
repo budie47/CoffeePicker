@@ -176,6 +176,7 @@
 	</div>
 	<?php
 	include 'admin/addNewShopModal.php';
+	include 'admin/updateShopSettingModal.php';
 	?>
 
 <script src="../controller/logout.js"></script>

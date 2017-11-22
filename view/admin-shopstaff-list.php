@@ -52,7 +52,7 @@
 										 <td>Active</td>
 										 <td>
 											 <div class="btn-group">
-												<button type="button" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CP_STAFF_UPDATE"><i class="fa fa-pencil" aria-hidden="true"></i></button>
 												<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
 											</div>
 										 </td>
@@ -107,9 +107,12 @@
 		 </div>
 		</div>
 
-
-
 	</div>
+	<?php
+	include 'admin/addNewStaffModal.php';
+	include 'admin/updateNewStaffModal.php';
+	include 'admin/updateShopSettingModal.php';
+	?>
 <script src="../controller/logout.js"></script>
 <script src="../controller/maintain-staff-controller.js"></script>
 
