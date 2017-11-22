@@ -144,6 +144,7 @@
                                     </a>
                                 </h4>
                                 <p class="price">RM 15.00</p>
+                                <button type="button" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#CP_MENU_VIEW">VIEW</button>
                             </div>
                         </section>
                     </div>
@@ -160,6 +161,7 @@
                                     </a>
                                 </h4>
                                 <p class="price">RM 12.00</p>
+                                <button type="button" class="btn btn-default btn-sm"  data-toggle="modal" data-target="#CP_MENU_VIEW">VIEW</button>
                             </div>
                         </section>
                     </div>
@@ -185,5 +187,6 @@
 
 
 </div><!-- /.container -->
+<?php require 'menu_view_detail.php'; ?>
 </body>
 </html>
