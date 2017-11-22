@@ -1,79 +1,67 @@
 <!-- Modal -->
-<div id="CP_SHOP_ADD" class="modal fade" role="dialog">
+<div id="CP_STOCK_ADD" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Set Up New Coffee Shop</h4>
+        <h4 class="modal-title">Add New Stock</h4>
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <label for="usr">Name:</label>
               <input type="text" class="form-control" id="usr">
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
-              <label for="usr">Address:</label>
+              <label for="usr">Stock No:</label>
               <input type="text" class="form-control" id="usr">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="usr">Town:</label>
+              <label for="usr">Quantity:</label>
+              <input type="number" class="form-control" id="usr">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="usr">Unit:</label>
               <input type="text" class="form-control" id="usr">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="usr">Postcode:</label>
+              <label for="usr">Price Per Unit:</label>
               <input type="text" class="form-control" id="usr">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="usr">State:</label>
-              <input type="text" class="form-control" id="usr">
+              <label for="usr">Total Price:</label>
+              <input type="text" class="form-control" id="usr" disabled>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="usr">Country:</label>
-              <input type="text" class="form-control" id="usr">
-            </div>
-          </div>
-        </div>
-        <label>Operation Hour</label>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="usr">Open:</label>
-              <input type="text" class="form-control" id="usr">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="usr">Close:</label>
-              <input type="text" class="form-control" id="usr">
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="img">Shop Image</label>
-          <input id="input-b2" name="input-b2" type="file" class="file" data-show-preview="false">
         </div>
 
-        <div class="form-group">
-          <label for="s">Status:</label>
-          <select class="form-control" id="sel1">
-           <option>Active</option>
-           <option>Inactive</option>
-         </select>
-        </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="usr">Expired Date:</label>
+              <input type="datepicker" class="form-control" id="usr">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="usr">Status:</label>
+              <input type="text" class="form-control" id="usr">
+            </div>
+          </div>
+
+
       </div>
       <div class="modal-footer" id="updateGSC">
           <div class="btn-group btn-group-justified" role="group" aria-label="group button">
