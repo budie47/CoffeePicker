@@ -86,7 +86,22 @@
 		<div class="panel panel-default">
 		 <div class="panel-heading">List of Shop</div>
 			<div class="panel-body">
-				<input type="text" class="form-control" id="" placeholder="Search your shop here">
+        <div class="row">
+
+          <div class="col-xs-12 col-md-12 col-sm-12">
+            <div class="input-group">
+               <input type="text" class="form-control" id="" placeholder="Search your shop here">
+             <span class="input-group-btn">
+                <button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+             </span>
+          </div>
+            <span>
+
+          </span>
+          </div>
+
+        </div>
+
 
 				<div class="row">
 						<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">

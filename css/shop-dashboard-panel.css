@@ -98,9 +98,10 @@
   font-size: 50px;
 }
 .shop-panel{
-  
+
   margin-top: 10px;
 }
-.container{
-    margin-left: 80px;
+.admin-shop{
+	margin-left: 200px;
+	margin-top: 10px;
 }

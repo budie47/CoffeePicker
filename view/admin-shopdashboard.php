@@ -9,91 +9,13 @@
  ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Coffee Picker | Shop Dashboard</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../lib/font-awesome-4.7.0/css/font-awesome.css">
-
-	<link rel="stylesheet" type="text/css" href="../css/sidemenu-shop.css">
-	<link rel="stylesheet" type="text/css" href="../css/cp-style.css">
-<link rel="stylesheet" type="text/css" href="../css/shop-dashboard-panel.css">
-	<script src="../lib/jquery-3.2.1.min.js"></script>
-	<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-
-</head>
+<?php require 'admin/header-admin-shopdashboard.php'; ?>
 <body>
 
-	<nav  class="navbar navbar-default navbar-static-top" role="navigation">
-		<div class="navbar-header navbar-right toright">
-			<span class="navbar-brand white" style="margin-right: 20px;" href="#">Welcome <?php echo $admin_name; ?></span>
-			<span class="navbar-brand white" style="margin-right: 20px;" href="#"><a onclick="logout()" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></span>
-		</div>
-
-		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-left mobileright">
-				<li> <a class="white" href="admindashboard.php">COFFEE PICKER | Kedai Kopi Saujana</a></li>
-			</ul>
-
-		</div>
-
-	</nav>
-
-	<div class="nav-side-menu">
-	    <div class="brand">Kedai Kopi Saujana</div>
-	    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-
-	        <div class="menu-list">
-
-	            <ul id="menu-content" class="menu-content collapse out">
-	                <li class="active">
-	                  <a href="#">
-	                  <i class="fa fa-shopping-cart fa-lg"></i> Shop Dashboard
-	                  </a>
-	                </li>
-
-	                <li data-toggle="collapse" data-target="#staff" class="collapsed">
-	                  <a href="#"><i class="fa fa-users fa-lg"></i> Maintain Staff <span class="arrow"></span></a>
-	                </li>
-	                <ul class="sub-menu collapse" id="staff">
-	                  <li>Staff List</li>
-	                  <li>Staff Log</li>
-	                </ul>
-									<li data-toggle="collapse" data-target="#stock" class="collapsed">
-										<a href="#"><i class="fa fa-archive fa-lg"></i> Maintain Stock <span class="arrow"></span></a>
-									</li>
-									<ul class="sub-menu collapse" id="stock">
-										<li>Stock List</li>
-										<li>Stock Report</li>
-									</ul>
-									<li data-toggle="collapse" data-target="#menu" class="collapsed">
-										<a href="#"><i class="fa fa-file-text-o fa-lg"></i> Maintain Menu <span class="arrow"></span></a>
-									</li>
-									<ul class="sub-menu collapse" id="menu">
-										<li>Menu List</li>
-										<li>Item List</li>
-									</ul>
-
-	                 <li>
-	                  <a href="#">
-	                  <i class="fa fa-cog fa-lg"></i> Shop Setting
-	                  </a>
-	                  </li>
-
-	                 <li>
-	                  <a href="#">
-	                  <i class="fa fa-arrow-left fa-lg"></i> Back to Shop List
-	                  </a>
-	                </li>
-	            </ul>
-	     </div>
-	</div>
+<?php require 'admin/nav-admindashboard.php'; ?>
+<?php require 'admin/sidemenu-admin-shopdashboard.php'; ?>
 
 	<div class="container" style="margin-left:200px">
-
 		<div class="row dashboard-stats shop-panel" >
 			<div class="col-md-12">
 				<div class="col-md-3 col-sm-6">
@@ -117,7 +39,6 @@
 										<p class="text-muted no-margin text"><span>Sales</span></p>
 								</div>
 						</section>
-
 				</div>
 				<div class="col-md-3 col-sm-6">
 						<section class="panel panel-box">
@@ -169,7 +90,6 @@
 
 			</div>
 
-
 			<div class="col-md-6">
 					<div class="panel panel-default">
 							<div class="panel-heading">
@@ -214,14 +134,11 @@
 	include 'admin/addNewShopModal.php';
 	?>
 
-
+<script src="../controller/logout.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#cp-home").show();
 });
-function logout(){
-	location.href="../controller/logout.php";
-}
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create

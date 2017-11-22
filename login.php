@@ -72,6 +72,8 @@
 	include 'view/registerModal.php';
 	?>
 
+	<script src="controller/login-controller.js"></script>
+
 	<script type="text/javascript">
 
 	$(document).ready(function(){
@@ -86,23 +88,7 @@
 					password:password,
 					type:"ADMIN"
 				}
-
-				$.ajax({
-					method:"POST",
-					timeout:3000,
-					url:"controller/login.php",
-					data:data,
-					success:function(r){
-						if(r.trim()==="|-SUCCESS-|"){
-							//alert("Success Login");
-							location.href="view/admindashboard.php"
-						}else if(r.trim()=== "No Current ID"){
-							alert("Your Account Does Not Exist");
-						} else{
-							console.log(r);
-						}
-					}
-				})
+				login(data)
 			}else{
 				alert("Please enter the login information correctly");
 			}
@@ -112,7 +98,6 @@
 
 
 	});
-
 	</script>
 </body>
 </html>

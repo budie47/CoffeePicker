@@ -63,7 +63,7 @@
 									<tr>
 										<td data-th="Product">
 											<div class="row">
-												<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+
 												<div class="col-sm-10">
 													<h4 class="nomargin">Mocha</h4>
 
@@ -89,10 +89,10 @@
 										<td class="text-center"><strong>Total 1.99</strong></td>
 									</tr>
 									<tr>
-										<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Ordering</a></td>
+										<td><a href="#" class="btn btn-default"><i class="fa fa-angle-left"></i> Continue Ordering</a></td>
 										<td colspan="2" class="hidden-xs"></td>
 										<td class="hidden-xs text-center"><strong>Total RM1.99</strong></td>
-										<td><a href="#" class="btn btn-success btn-block">Make Order <i class="fa fa-angle-right"></i></a></td>
+										<td><a href="#" class="btn btn-default btn-block">Make Order <i class="fa fa-angle-right"></i></a></td>
 									</tr>
 								</tfoot>
 							</table>
@@ -103,7 +103,21 @@
 		<div class="panel panel-default">
 		 <div class="panel-heading">Selected Shop</div>
 			<div class="panel-body">
-				<h4>Shop Information</h4>
+        <div class="row">
+            <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+              <ul class="shop-list-list menu-shop-info">
+                <li>
+                  <!-- <img src="img/example.jpg" alt=""> -->
+                  <div class="info menu-shop-detail">
+                    <h2 class="title">The Coffee Bean</h2>
+                    <p class="desc"><b>Address:</b> Jusco Melaka Shopping Center, G39, Lebuh Ayer Keroh, 75450 Melaka</p>
+                    <p class="desc"><b>Open Hour:</b>10AM–10PM</p>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
 		 </div>
 		</div>
 	 </div>
