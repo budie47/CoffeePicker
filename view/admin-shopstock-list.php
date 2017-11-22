@@ -3,8 +3,8 @@
 	if (!isset($_SESSION['id'])) {
 		header('Location: ../index.php');
 	}
-	$admin_id = $_SESSION['id'];
-	$admin_name = $_SESSION['name'];
+	$user_id = $_SESSION['id'];
+	$user_name = $_SESSION['name'];
 
  ?>
 <!DOCTYPE html>
@@ -21,6 +21,11 @@
 			<div class="panel panel-default">
 			 <div class="panel-heading">Stock List</div>
 				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12" style="padding:15px;">
+							<button type="button" class="btn btn-primary btn-shop" data-toggle="modal" data-target="#CP_STOCK_ADD"><i class="fa fa-plus" aria-hidden="true"></i> Add Stock</button>
+						</div>
+					</div>
 					<table class="table table-bordered" id="stock_list_table">
 					 <thead>
 						 <tr>

@@ -3,8 +3,8 @@
 	if (!isset($_SESSION['id'])) {
 		header('Location: ../index.php');
 	}
-	$admin_id = $_SESSION['id'];
-	$admin_name = $_SESSION['name'];
+	$user_id = $_SESSION['id'];
+	$user_name = $_SESSION['name'];
 
  ?>
 <!DOCTYPE html>
@@ -16,35 +16,50 @@
 <?php require 'admin/sidemenu-admin-shopdashboard.php'; ?>
 
 	<div class="container admin-shop">
-
 		<div class="row">
 		 <div class="col-md-12" >
 			<div class="panel panel-default">
 			 <div class="panel-heading">Staff Log</div>
 				<div class="panel-body">
-					<table class="table table-bordered" id="staff_list_table">
+					<table class="table table-bordered" id="staff_log_table">
 					 <thead>
 						 <tr>
-							 <th>Firstname</th>
-							 <th>Lastname</th>
-							 <th>Email</th>
+							 <th>Name</th>
+							 <th>Date Log In</th>
+							 <th>Time Log In</th>
+							 <th>Date Log Out</th>
+							 <th>Time Log Out</th>
 						 </tr>
 					 </thead>
 					 <tbody>
 						 <tr>
-							 <td>John</td>
-							 <td>Doe</td>
-							 <td>john@example.com</td>
+							 <td>Hasif Hamdan</td>
+							 <td>21-11-2017</td>
+							 <td>08:00:21</td>
+							 <td>21-11-2017</td>
+							 <td>18:00:21</td>
+
 						 </tr>
 						 <tr>
-							 <td>Mary</td>
-							 <td>Moe</td>
-							 <td>mary@example.com</td>
+							 <td>Muz Affan</td>
+							 <td>21-11-2017</td>
+							 <td>08:00:21</td>
+							 <td>21-11-2017</td>
+							 <td>18:00:21</td>
 						 </tr>
 						 <tr>
-							 <td>July</td>
-							 <td>Dooley</td>
-							 <td>july@example.com</td>
+							 <td>Hafiz Din</td>
+							 <td>21-11-2017</td>
+							 <td>08:00:21</td>
+							 <td>+6014447456</td>
+							 <td>18:00:21</td>
+						 </tr>
+						 <tr>
+							 <td>Syukri Othaman</td>
+							 <td>21-11-2017</td>
+							 <td>08:00:21</td>
+							 <td>21-11-2017</td>
+							 <td>18:00:21</td>
 						 </tr>
 					 </tbody>
 				 </table>

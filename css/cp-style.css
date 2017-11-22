@@ -2,7 +2,7 @@ body{
 
 	background-color: #CBAC85;
 }
-.form-control,.btn,.panel,.thumbnail,.navbar-inverse{
+.form-control,.btn,.panel,.thumbnail,.navbar-inverse,.modal-content{
 	border-radius: 0px;
 }
 

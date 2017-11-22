@@ -3,8 +3,8 @@
 	if (!isset($_SESSION['id'])) {
 		header('Location: ../index.php');
 	}
-	$admin_id = $_SESSION['id'];
-	$admin_name = $_SESSION['name'];
+	$user_id = $_SESSION['id'];
+	$user_name = $_SESSION['name'];
 
  ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
 
 	<nav  class="navbar navbar-default navbar-static-top" role="navigation">
 		<div class="navbar-header navbar-right toright">
-			<span class="navbar-brand white" style="margin-right: 20px;" href="#">Welcome <?php echo $admin_name; ?></span>
+			<span class="navbar-brand white" style="margin-right: 20px;" href="#">Welcome <?php echo $user_name; ?></span>
 			<span class="navbar-brand white" style="margin-right: 20px;" href="#"><a onclick="logout()" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i></a></span>
 		</div>
 
@@ -95,13 +95,13 @@
 
 
 	</div>
+	<?php require 'admin/addNewShopModal.php' ?>
 <script src="../controller/logout.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#cp-home").show();
 })
-
 </script>
 
 
