@@ -512,3 +512,7 @@ body{
 .modal-footer{
 	padding: 2px;
 }
+
+.bootstrap-timepicker-widget.dropdown-menu {
+    z-index: 99999!important;
+}
