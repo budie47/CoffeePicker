@@ -24,26 +24,45 @@
 					<table class="table table-bordered" id="staff_list_table">
 					 <thead>
 						 <tr>
-							 <th>Firstname</th>
-							 <th>Lastname</th>
-							 <th>Email</th>
+							 <th>Menu Code</th>
+							 <th>Menu Name</th>
+							 <th>Status</th>
+							 <th>Action</th>
 						 </tr>
 					 </thead>
 					 <tbody>
 						 <tr>
-							 <td>John</td>
-							 <td>Doe</td>
-							 <td>john@example.com</td>
+							 <td>MN002112</td>
+							 <td>Coffee</td>
+							 <td>Active</td>
+							 <td>
+								 <div class="btn-group">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CP_STAFF_UPDATE"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+									<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+								</div>
+							 </td>
 						 </tr>
 						 <tr>
-							 <td>Mary</td>
-							 <td>Moe</td>
-							 <td>mary@example.com</td>
+							 <td>MN002112</td>
+							 <td>Coffee</td>
+							 <td>Active</td>
+							 <td>
+								 <div class="btn-group">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CP_STAFF_UPDATE"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+									<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+								</div>
+							 </td>
 						 </tr>
 						 <tr>
-							 <td>July</td>
-							 <td>Dooley</td>
-							 <td>july@example.com</td>
+							 <td>MN002112</td>
+							 <td>Coffee</td>
+							 <td>Active</td>
+							 <td>
+								 <div class="btn-group">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#CP_STAFF_UPDATE"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+									<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
+								</div>
+							 </td>
 						 </tr>
 					 </tbody>
 				 </table>
