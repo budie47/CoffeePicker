@@ -23,14 +23,14 @@
                 </li>
                 <ul class="sub-menu collapse" id="stock">
                   <li><a href="admin-shopstock-list.php">Stock List</a></li>
-                  <li><a href="admin-shopstock-report.php">Stock Report</a></li>
+                  <!-- <li><a href="admin-shopstock-report.php">Stock Report</a></li> -->
                 </ul>
                 <li data-toggle="collapse" data-target="#menu" class="collapsed">
                   <a href="#"><i class="fa fa-file-text-o fa-lg"></i> Maintain Menu <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="menu">
                   <li><a href="admin-shopmenu-list.php">Menu List</a></li>
-                  <li><a href="admin-shopitem-list.php">Item List</a></li>
+                  <!-- <li><a href="admin-shopitem-list.php">Item List</a></li> -->
                 </ul>
                  <li>
                   <a href="#" data-toggle="modal" data-target="#CP_SHOP_SETTING_UPDATE">

@@ -10,7 +10,7 @@
 
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-left mobileright">
-      <li> <a class="white" href="admindashboard.php">COFFEE PICKER | Coffee Bean House</a></li>
+      <li> <a class="white" href="admindashboard.php">COFFEE PICKER |  <?php echo $_SESSION['shop_name']; ?></a></li>
     </ul>
   </div>
 </nav>

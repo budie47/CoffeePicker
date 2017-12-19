@@ -23,7 +23,7 @@ session_start();
 		<script src="../lib/jquery-3.2.1.min.js"></script>
 		<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 		<script src="../lib/timepicker/js/bootstrap-timepicker.js"></script>
-		<script src="../lib/js/flexdatalist/jquery.flexdatalist.js"></script>
+		<!-- <script src="../lib/js/flexdatalist/jquery.flexdatalist.js"></script> -->
 		<script type="text/javascript" src="../controller/shop-controller.js"></script>
 
 	</head>
@@ -48,18 +48,8 @@ session_start();
 				<div class="shop-btn-menu">
 					<button type="button" class="btn btn-primary btn-shop" data-toggle="modal" data-target="#CP_SHOP_ADD"><i class="fa fa-plus" aria-hidden="true"></i> Add New Shop</button>
 				</div>
-				<div class="row">
-					<div class="shop-list">
-						<div class="col-xs-6 col-md-3 shop-detail">
-							<a href="admin-shopdashboard.php" class="thumbnail">
-								<label class="shop-title">Coffee Bean House</label>
-								<hr>
-								<span>Lot94, Jalan Lapangan Terbang Subang, Saujana, 40150 Shah Alam, Selangor</span><br />
-								<span>Operation Hour : <b>1000 - 2100</b> </span><br />
-								<span>Status : <b>OPEN</b></span>
-							</a>							
-						</div>
-					</div>
+				<div class="row" id="admin-list-reload">
+					
 				</div>
 			</div>
 		</div>
@@ -69,6 +59,7 @@ session_start();
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("#cp-home").show();
+				$("#admin-list-reload").load("admin/admin-list-shop.php");
 			})
 		</script>
 	</body>

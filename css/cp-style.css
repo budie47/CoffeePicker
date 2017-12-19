@@ -516,3 +516,7 @@ body{
 .bootstrap-timepicker-widget.dropdown-menu {
     z-index: 99999!important;
 }
+
+.cp-hidden {
+	display: none;
+}

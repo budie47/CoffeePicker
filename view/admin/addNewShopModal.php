@@ -5,7 +5,7 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <form>
+      <form id="CP_SHOP_ADD_FORM">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Set Up New Coffee Shop</h4>
@@ -45,15 +45,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="usr">Country:</label>
-                <!-- <input type="text" class="form-control"> -->
-                <input type='text'
-                       placeholder='Write your country name'
-                       class='flexdatalist'
-                       data-data='../lib/flexdatalist/countries.json'
-                       data-search-in='name'
-                       data-min-length='1'
-                        id="CP_NEW_SHOP_COUNTRY"
-                       name='country_name_suggestion'>
+                <input type="text" class="form-control" id="CP_NEW_SHOP_COUNTRY">
               </div>
             </div>
             <div class="col-md-12">

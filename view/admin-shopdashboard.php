@@ -1,10 +1,15 @@
 <?php
 	session_start();
+	include '../controller/dbconn.php';
 	if (!isset($_SESSION['id'])) {
 		header('Location: ../index.php');
 	}
+	if (!isset($_SESSION['shop_id'])) {
+		header('Location: admindashboard.php');
+	}
 	$user_id = $_SESSION['id'];
 	$user_name = $_SESSION['name'];
+	$shop_id = $_SESSION['shop_id'];
 
  ?>
 <!DOCTYPE html>
@@ -167,16 +172,11 @@
 
 
 
-
-
-
-
-
-
 	</div>
 	<?php
 	include 'admin/addNewShopModal.php';
 	include 'admin/updateShopSettingModal.php';
+	include 'admin/updateShopImage.php';
 	?>
 
 <script src="../controller/logout.js"></script>
