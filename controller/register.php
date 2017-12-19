@@ -1,6 +1,7 @@
 <?php
 
 include 'dbconn.php';
+include 'getId.php';
   $type= $_POST["type"];
 
   switch ($type) {
@@ -30,8 +31,30 @@ include 'dbconn.php';
             echo "Database Connection Error";
           }
         break;
-    case 1:
-        echo "i equals 1";
+   case "PUBLIC":
+        $first_name = $_POST["first_name"];
+        $last_name = $_POST["last_name"];
+        $username = $_POST["username"];
+        $password = sha1($_POST["password"]);
+        $email = $_POST["email"];
+        $phone_no = $_POST["phone_no"];
+        $conn = dbcon();
+        if($conn){
+          $user_new_id = getId('pc_user');
+          //echo $admin_new_id;
+          $sql_admin_register = "INSERT INTO `pc_user` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `phone_no`,`datetime_created`)";
+          $sql_admin_register_2 = $sql_admin_register."VALUES ('".$user_new_id."', '".$username."', '".$password."', '".$first_name."', '".$last_name."', '".$email."', '".$phone_no."',NOW());";
+          if ($conn->query($sql_admin_register_2) === TRUE) {
+              echo "|-SUCCESS-|";
+
+          } else {
+              echo "Error: " . $sql . "<br>" . $conn->error;
+          }
+          dbclose();
+
+        }else{
+          echo "Database Connection Error";
+        }
         break;
     case 2:
         echo "i equals 2";

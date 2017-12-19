@@ -58,6 +58,7 @@ $shop_id = $_SESSION['shop_id'];
 				}
 			}else {
 				echo "No Current ID";
+				echo $sql_get_current_id;
 			}
 		}
 

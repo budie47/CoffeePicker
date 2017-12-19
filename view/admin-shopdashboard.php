@@ -10,6 +10,67 @@
 	$user_id = $_SESSION['id'];
 	$user_name = $_SESSION['name'];
 	$shop_id = $_SESSION['shop_id'];
+	$profit = "";
+	$total_order = "";
+
+	$total_staff = "";
+
+	$total_cup = "";
+
+	$connList = dbcon();
+	
+	if($connList){
+		$sql_get_current_id = "SELECT COUNT(id) AS id FROM `pc_cart` WHERE status = 1";
+
+		$resultList = $connList->query($sql_get_current_id);
+
+		if ($resultList->num_rows > 0) {
+
+			while($row = $resultList->fetch_assoc()) {
+				$total_cup = $row['id'];
+
+			}
+		}else {
+			echo "No Current ID";
+		}
+	}
+
+	if($connList){
+		$sql_get_current_id = "SELECT SUM(total_price) AS profit, COUNT(id) AS total_order FROM `pc_order_master` WHERE store_id ='".$shop_id."'";
+
+		$resultList = $connList->query($sql_get_current_id);
+
+		if ($resultList->num_rows > 0) {
+
+			while($row = $resultList->fetch_assoc()) {
+				$profit = $row['profit'];
+				$total_order = $row['total_order'];
+
+			}
+		}else {
+			echo "No Current ID";
+		}
+	}
+
+	if($connList){
+		$sql_get_current_id = "SELECT COUNT(id) as total_staff FROM `pc_staff` WHERE store_id = '".$shop_id."' ";
+
+		$resultList = $connList->query($sql_get_current_id);
+
+		if ($resultList->num_rows > 0) {
+
+			while($row = $resultList->fetch_assoc()) {
+				$total_staff = $row['total_staff'];
+
+			}
+		}else {
+			echo "No Current ID";
+		}
+	}
+
+
+
+
 
  ?>
 <!DOCTYPE html>
@@ -20,6 +81,12 @@
 <?php require 'admin/nav-admindashboard.php'; ?>
 <?php require 'admin/sidemenu-admin-shopdashboard.php'; ?>
 
+<style type="text/css">
+	.size-h1{
+		font-size: 18px;
+	}
+</style>
+
 	<div class="container" style="margin-left:200px">
 		<div class="row dashboard-stats shop-panel" >
 			<div class="col-md-12">
@@ -29,7 +96,7 @@
 										<i class="fa fa-dollar text-large stat-icon success-text"></i>
 								</div>
 								<div class="panel-right panel-icon bg-reverse">
-										<p class="size-h1 no-margin countdown_first">9999</p>
+										<p class="size-h1 no-margin countdown_first">RM <?php echo $profit; ?></p>
 										<p class="text-muted no-margin text"><span>Profit</span></p>
 								</div>
 						</section>
@@ -40,7 +107,7 @@
 										<i class="fa fa-shopping-cart text-large stat-icon danger-text"></i>
 								</div>
 								<div class="panel-right panel-icon bg-reverse">
-										<p class="size-h1 no-margin countdown_second">9999</p>
+										<p class="size-h1 no-margin countdown_second"><?php echo $total_order; ?></p>
 										<p class="text-muted no-margin text"><span>Sales</span></p>
 								</div>
 						</section>
@@ -51,8 +118,8 @@
 										<i class="fa fa-line-chart text-large stat-icon lovender-text"></i>
 								</div>
 								<div class="panel-right panel-icon bg-reverse">
-										<p class="size-h1 no-margin countdown_third">9999<span class="size-h3">%</span></p>
-										<p class="text-muted no-margin text"><span>Growth</span></p>
+										<p class="size-h1 no-margin countdown_third"><?php echo $total_cup; ?> Cup<span class="size-h3"></span></p>
+										<p class="text-muted no-margin text"><span>Coffee Served</span></p>
 								</div>
 						</section>
 				</div>
@@ -63,7 +130,7 @@
 										<i class="fa fa-users text-large stat-icon info-text"></i>
 								</div>
 								<div class="panel-right panel-icon bg-reverse">
-										<p class="size-h1 no-margin countdown_fourth">999</p>
+										<p class="size-h1 no-margin countdown_fourth"><?php echo $total_staff; ?></p>
 										<p class="text-muted no-margin text"><span>Users</span></p>
 								</div>
 						</section>
@@ -105,26 +172,43 @@
 									 <thead>
 										 <tr>
 											 <th>Stock Name</th>
-											 <th>Quantity Left</th>
+											 <th>Stock No </th>
+											 <th>Quantity </th>
+											 <th>Expired Date </th>
 
 										 </tr>
 									 </thead>
 									 <tbody>
-										 <tr>
-											 <td>Coffee Bean</td>
-											 <td>2 Packet</td>
+									 	<?php 
 
-										 </tr>
-										 <tr>
-											 <td>Milk</td>
-											 <td>3 Bottle</td>
+									 	if($connList){
+									 		$sql_get_current_id = "SELECT name,stock_no,quantity,DATE(expired_date) as expired_date FROM `pc_stock` WHERE store_id = '".$shop_id."' ORDER BY expired_date DESC ";
 
-										 </tr>
-										 <tr>
-											 <td>Choco Powder</td>
-											 <td>1 Packet</td>
+									 		$resultList = $connList->query($sql_get_current_id);
 
-										 </tr>
+									 		if ($resultList->num_rows > 0) {
+
+									 			while($row = $resultList->fetch_assoc()) {
+									 				?>
+
+									 				 <tr>
+									 				 	<td><?php echo $row['name']; ?></td>
+									 				 	<td><?php echo $row['stock_no']; ?></td>
+									 				 	<td><?php echo $row['quantity']; ?></td>
+									 				 	<td><?php echo $row['expired_date']; ?> </td>
+									 				 </tr>
+	
+
+									 				<?
+
+									 			}
+									 		}else {
+									 			echo "No Current ID";
+									 		}
+									 	}
+
+									 	 ?>
+
 									 </tbody>
 								 </table>
 								</div>

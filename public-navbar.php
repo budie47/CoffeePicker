@@ -11,7 +11,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class=""><a href="index.php">Home</a></li>
+            <li class=""><a href="shop.php">Home</a></li>
 
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">Shop <b class="caret"></b></a>
@@ -23,11 +23,9 @@
 						</li>
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
               <ul class="dropdown-menu">
-								<li><a href="user-login.php">User</a></li>
-								<li class="divider"></li>
-                <li><a href="login.php">Shop Manager</a></li>
+								<li><a href="controller/logout.php">Log Out</a></li>
 
               </ul>
             </li>

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php require 'header.php'; ?>
-<body>
-
-	<div class="navbar-wrapper">
+<body>	<div class="navbar-wrapper">
   <div class="container">
     <div class="navbar navbar-inverse navbar-static-top">
         <div class="navbar-header">
@@ -44,7 +42,6 @@
   </div><!-- /container -->
 </div><!-- /navbar wrapper -->
 
-
 	<div class="container">
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 login-box center">
 			<div class="form-group logo-div">
@@ -64,13 +61,13 @@
 			<div class="form-group">
 				<button type="button" class="btn btn-default btn-block" id="CP_LOGIN">LOGIN</button>
 			</div>
-			<a href="#" data-toggle="modal" data-target="#CP_REGISTER">Sign Up Here</a>
-
+			<!-- <a href="#" data-toggle="modal" data-target="#CP_PUBLIC_REGISTER">Sign Up Here</a>
+ -->
 		</div>
 
 	</div>
 	<?php
-	include 'view/registerModal.php';
+	include 'view/public-registerModal.php';
 	?>
 
 	<script src="controller/login-controller.js"></script>
@@ -87,9 +84,9 @@
 				var data = {
 					username:username,
 					password:password,
-					type:"ADMIN"
+					type:"STAFF"
 				}
-				login(data)
+				loginStaff(data)
 			}else{
 				alert("Please enter the login information correctly");
 			}

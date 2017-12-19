@@ -1,6 +1,18 @@
+<?php 
+
+session_start();
+include 'controller/dbconn.php';
+
+	if (!isset($_SESSION["user_id"])) {
+		header('Location: user-login.php');
+	}
+
+	
+	 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php require 'header.php'; ?>
+<?php require 'header.php'; 
+?>
 <body class="">
 <?php require 'public-navbar.php'; ?>
 
@@ -21,71 +33,87 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td data-th="Product">
-											<div class="row">
+									<?php 
+									
+									$connList = dbcon();
 
-												<div class="col-sm-10">
-													<h4 class="nomargin">Mocha</h4>
+									$totalPrice = 0;
 
-													<p>Size : Large 12oz</p>
-													<p>Add Ons : Chocolate Powder Topping</p>
-													<p>Comment : Put more Chocolate Topping and less suger</p>
-												</div>
-											</div>
-										</td>
-										<td data-th="Price">RM 1.99</td>
-										<td data-th="Quantity">
-											<input type="number" class="form-control text-center" value="1">
-										</td>
-										<td data-th="Subtotal" class="text-center">RM 1.99</td>
-										<td class="actions" data-th="">
+									if($connList){
+										$sql_cart = "SELECT item_id,price,item_name,size,comment FROM `pc_cart` WHERE user_id = '".$_SESSION["user_id"]."' AND status = 0";
+										$resultList = $connList->query($sql_cart);
+										if ($resultList->num_rows > 0) {
+											while($row = $resultList->fetch_assoc()) {
+												$item_id = $row['item_id'];
+												$price = $row['price'];
+												$item_name = $row['item_name'];
+												$size = $row['size'];
+												$comment = $row['comment'];
 
-											<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
-										</td>
-									</tr>
+												$p = explode(" ", $price);
+												$totalPrice =$totalPrice + floatval($p[1]);
+
+												echo $totalPrice;
+												?>
+
+												<tr>
+													<td data-th="Product">
+														<div class="row">
+
+															<div class="col-sm-10">
+																<h4 class="nomargin"> <?php echo $item_id." | ".$item_name; ?></h4>
+
+																<p>Size : <?php echo $size; ?></p>
+																
+																<p>Comment :<?php echo $comment; ?></p>
+															</div>
+														</div>
+													</td>
+													<td data-th="Price"> <?php echo $price; ?></td>
+													<td data-th="Quantity">
+														<input type="number" class="form-control text-center" value="1">
+													</td>
+													<td data-th="Subtotal" class="text-center"><?php echo $price; ?></td>
+													<td class="actions" data-th="">
+
+														<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+													</td>
+												</tr>
+
+
+
+												<?php
+
+												
+											}
+										}
+
+									}
+
+									 ?>
+
 								</tbody>
 								<tfoot>
 									<tr class="visible-xs">
-										<td class="text-center"><strong>Total 1.99</strong></td>
+										<td class="text-center"><strong>Total <?php echo $totalPrice; ?></strong></td>
 									</tr>
 									<tr>
 										<td><a href="#" class="btn btn-default"><i class="fa fa-angle-left"></i> Continue Ordering</a></td>
 										<td colspan="2" class="hidden-xs"></td>
-										<td class="hidden-xs text-center"><strong>Total RM1.99</strong></td>
-										<td><a href="#" class="btn btn-default btn-block">Make Order <i class="fa fa-angle-right"></i></a></td>
+										<td class="hidden-xs text-center"><strong>Total RM<?php echo $totalPrice; ?> <p id="total_price_order" class="cp-hidden"><?php echo $totalPrice; ?></p></strong></td>
+										<td><button class="btn btn-default btn-block" id="CP_ORDER_MAKE_BTN">Make Order <i class="fa fa-angle-right"></i></button></td>
 									</tr>
 								</tfoot>
 							</table>
 		 </div>
 		</div>
 	 </div>
-	 <div class="col-md-4" >
-		<div class="panel panel-default">
-		 <div class="panel-heading">Selected Shop</div>
-			<div class="panel-body">
-        <div class="row">
-            <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
-              <ul class="shop-list-list menu-shop-info">
-                <li>
-                  <!-- <img src="img/example.jpg" alt=""> -->
-                  <div class="info menu-shop-detail">
-                    <h2 class="title">The Coffee Bean</h2>
-                    <p class="desc"><b>Address:</b> Jusco Melaka Shopping Center, G39, Lebuh Ayer Keroh, 75450 Melaka</p>
-                    <p class="desc"><b>Open Hour:</b>10AM–10PM</p>
-                  </div>
 
-                </li>
-              </ul>
-            </div>
-          </div>
-		 </div>
-		</div>
-	 </div>
 	</div>
 
 
 
 </div>
+<script type="text/javascript" src="controller/public-order-controller.js"></script>
 </body>
 </html>
